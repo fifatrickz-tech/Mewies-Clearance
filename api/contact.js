@@ -65,7 +65,7 @@ export default async function handler(req, res) {
 
     const { data, error } = await resend.emails.send({
       from: process.env.FROM_EMAIL || "Mewie's Clearance <onboarding@resend.dev>",
-      to: [process.env.TO_EMAIL || 'your-email@example.com'],
+      to: [process.env.TO_EMAIL || 'mewiesltd@gmail.com'],
       replyTo: email,
       subject: `New clearance enquiry from ${name.trim()}`,
       html: buildEmailHtml({ name, phone, email, postcode, service, message }),
